@@ -1,0 +1,251 @@
+html {
+    font-size: 10px;
+}
+body {
+margin: 0;
+background-color: #040322;
+font-family: 'Kreon';
+font-style: normal;
+font-size: 3rem;
+font-weight: 100;
+line-height: 38px;
+color: #FFFFFF;
+}
+h1 {
+font-family: 'Major Mono Display';
+font-style: normal;
+font-weight: 200;
+font-size: 6rem;
+margin: 0;
+padding: 30px 0 30px 30px;
+}
+h2 {
+    font-weight: 300;
+    font-size: 6rem;
+    line-height: 76px;
+    margin: 0;
+    padding: 4rem;
+    text-align: center;
+}
+p {
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    text-justify: inter-word;
+}
+#nav {
+    position: sticky;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #040322;
+    height: 90px;
+    scroll-margin-top: 50px;
+}
+.sticky {
+    position: sticky;
+    top: 90px;
+}
+#nav h1 a {
+    cursor: default;
+    text-decoration: none;
+    color: #FFFFFF;
+    cursor: crosshair;
+}
+#nav h1 a:hover {
+    text-decoration: underline;
+    color: #FFFFFF;
+}
+#nav h1 a:active {
+    text-decoration: none;
+    color: #ff0000;
+}
+#nav ul{
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+#nav li {
+    padding: 0 30px 0 0;
+}
+#nav li a {
+    font-weight: 400;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.line {
+    border-bottom: 1px solid #ffff00;
+}
+#nav li a:hover  {
+    color: #ffff00;
+    transition: 0.5s;
+}
+#nav li a {
+    cursor: crosshair;
+}
+#nav li a:active {
+    color: #ff0000;
+}
+#bigpicture {
+    background-image: url(./img/jumbo.png);
+    height: 295px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0;
+}
+#team img {
+    width: 168px;
+    height: 168px;
+}
+#sprzet img {
+    width: 400px;
+    height: 300px;
+}
+#lokalizacja img {
+    width: 750px;
+    height: 616px;
+}
+.center {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#gra {
+    scroll-margin-top: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+#team {
+    scroll-margin-top: 20rem;
+    justify-items: center;
+    align-items: end;
+    display: grid;
+    gap: 5px 5px;
+    grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(168px, 1fr));
+    grid-template-areas:
+        "img1 p2 img3 p4 img5"
+        "p1 img2 p3 img4 p5";
+}
+
+.img1 {grid-area: img1;}
+.img2 { grid-area: img2; }
+.img3 { grid-area: img3; }
+.img4 { grid-area: img4; }
+.img5 { grid-area: img5; }
+.p1 {grid-area: p1; margin-bottom: 130px;}
+.p2 {grid-area: p2;}
+.p3 { grid-area: p3; margin-bottom: 130px;}
+.p4 { grid-area: p4; }
+.p5 { grid-area: p5; margin-bottom: 130px;}
+
+#sprzet {
+    scroll-margin-top: 20rem;
+    margin: 0;
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+.square p {
+    text-align: center;
+}
+.center {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.center-grid {
+    display: flex;
+    justify-content: center;
+}
+#lokalizacja {
+    scroll-margin-top: 20rem;
+    margin: 0;
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+#lokalizacja p {
+    width: 350px;
+}
+#lokalizacja img {
+    width: 50%;
+    height: 50%;
+}
+footer {
+    margin-top: 10rem;
+    float: right;
+}
+
+
+/* TABLETS and MOBILE */ 
+
+
+@media only screen and (max-width: 980px)
+{
+
+h1 {
+    font-size: 4rem;
+}
+#nav li {
+    padding: 0 25px 0 25px;
+}
+
+.center {
+    width: 90%;
+}
+#team {
+    grid-template-areas:
+    "img1 img2"
+    "p1 p2"
+    "img3 img4"
+    "p3 p4"
+    "img5 img5"
+    "p5 p5";
+}
+.p1 {grid-area: p1; margin-bottom: 130px;}
+.p2 {grid-area: p2; margin-bottom: 130px;}
+.p3 { grid-area: p3; margin-bottom: 130px;}
+.p4 {grid-area: p4; margin-bottom: 130px;}
+.p5 { grid-area: p5; margin-bottom: 130px;}
+#lokalizacja img {
+    width: 80%;
+    height: 80%;
+}
+}
+@media only screen and (max-width: 560px)
+{
+body {
+    font-size: 2rem;
+}
+h1 {
+    font-size: 3rem;
+}
+#nav li {
+    padding: 0 30px 0 30px;
+}
+#team {
+    grid-template-areas:
+    "img1 img2"
+    "p1 p2"
+    "img3 img4"
+    "p3 p4"
+    "img5 img5"
+    "p5 p5";
+}
+.p1 {grid-area: p1; margin-bottom: 130px;}
+.p2 {grid-area: p2; margin-bottom: 130px;}
+.p3 { grid-area: p3; margin-bottom: 130px;}
+.p4 {grid-area: p4; margin-bottom: 130px;}
+.p5 { grid-area: p5; margin-bottom: 130px;}
+#lokalizacja img {
+    width: 80%;
+    height: 80%;
+}
+}
